@@ -23,3 +23,29 @@ $ mv /.env.template /.env
 $ npm install
 $ npm run start
 ```
+
+### Sample request
+
+https://pencil-be.herokuapp.com/search?q=Briefly describe the non-cyclical nature of energy flow
+
+### Response
+
+["157", "23", "83" ]
+
+### Sample Query
+
+await client.db('pencil-db').collection('questions')
+    .find({ 'ancestors': 'My topic' }).toArray();
+
+This returns all documents/questions that matches "My Topic"
+
+
+Accessing Mongo Atlas
+email: <shared in email>
+password: <shared in email>
+
+1. Once in
+2. Click on pencil-be-cluster cluster.
+3. CLick on Collections
+4. You will find questions and topics collections.
+
