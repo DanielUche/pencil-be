@@ -40,12 +40,11 @@ await client.db('pencil-db').collection('questions')
 This returns all documents/questions that matches "My Topic"
 
 
-Accessing Mongo Atlas
-email: <shared in email>
-password: <shared in email>
+### Accessing Mongo Atlas
+email: <####>
+password: <s####>
 
-1. Once in
-2. Click on pencil-be-cluster cluster.
-3. CLick on Collections
-4. You will find questions and topics collections.
+1. Once in Click on pencil-be-cluster cluster.
+2. CLick on Collections
+3. You will find questions and topics collections.
 
