@@ -22,13 +22,13 @@ app.get('/', (req, res) => res.send("OK"));
 app.get('/search', async (req, res) => {
   const { query } = req;
   if (!query.hasOwnProperty('q')) {
-    return res.json({
+    return res.status(400).json({
       msg: 'query params not found'
     });
   }
   const result = await client.db('pencil-db').collection('questions')
     .find({ 'ancestors': query.q }).toArray();
-  return res.send(result.map((data) => data._id));
+  return res.status(200).send(result.map((data) => data._id));
 })
 
 app.listen(port, () => {
